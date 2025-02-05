@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baris Bali | Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2d333b;
+            --secondary-color: #22272e;
+            --text-color: #adbac7;
+            --highlight-color: #539bf5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight-color);
+        }
+
+        section {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-post {
+            background: var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--highlight-color);
+            color: #fff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        a {
+            color: var(--highlight-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://github.com/barisbali.png" alt="Profile Picture" class="profile-img">
+            <h1>Baris Bali</h1>
+            <p>💻 Software Developer | 🚀 Tech Enthusiast | ☕ Coffee Lover</p>
+            <div class="social-links">
+                <a href="https://github.com/barisbali" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/barisbali" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/barisbali" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </header>
+
+        <section id="projects">
+            <h2>🛠️ Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>A cool project description goes here.</p>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Another amazing project description.</p>
+                    <span class="tag">Python</span>
+                    <span class="tag">Django</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>✍️ Latest Blog Posts</h2>
+            <div class="blog-post">
+                <h3>Getting Started with GitHub Pages</h3>
+                <p>Published on June 1, 2023</p>
+                <p>Learn how to create your own GitHub Pages website from scratch...</p>
+                <a href="#">Read more →</a>
+            </div>
+            <div class="blog-post">
+                <h3>Best Practices for Clean Code</h3>
+                <p>Published on May 15, 2023</p>
+                <p>Tips and tricks for writing maintainable and clean code...</p>
+                <a href="#">Read more →</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html></section>
