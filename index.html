@@ -171,6 +171,7 @@
                 <a href="https://twitter.com/barisbali" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
             <a href="https://barisbali.com" class="website-link" target="_blank">View My Website</a>
+            
         </header>
 
         <div class="projects-grid">
@@ -209,6 +210,7 @@
             </div>
         </div>
     </div>
+        
 
     <script>
         particlesJS("particles-js", {
@@ -262,19 +264,26 @@
 </html>
 
 <style>
-    .blog-button {
-        background: var(--secondary-color);
-        color: var(--highlight-color);
-        border: 1px solid var(--highlight-color);
-        padding: 0.8rem 2rem;
-        border-radius: 4px;
-        text-decoration: none;
-        margin-left: 1rem;
-        transition: all 0.3s;
-    }
-    .blog-button:hover {
-        background: rgba(100, 255, 218, 0.1);
-    }
+    .f1-button {
+    position: fixed;  /* Keeps it at the bottom-right even when scrolling */
+    bottom: 20px;     /* Distance from the bottom */
+    right: 20px;      /* Distance from the right */
+    background: var(--secondary-color);
+    color: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    z-index: 100;  /* Ensures it's above other elements */
+}
+
+.f1-button:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
 </style>
 
-<a href="/blog" class="blog-button">Read My Blog</a>
+
+<a href="/f1-calendar.html" class="f1-button">F1 2025 CALENDAR</a>
+
