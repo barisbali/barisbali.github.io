@@ -591,6 +591,207 @@
         height: 60vh;
       }
     }
+
+    /* Tech Skills Section */
+    .skills-section {
+      margin-top: 4rem;
+      padding: 2rem;
+      background: rgba(29, 0, 69, 0.8);
+      border: 2px solid var(--neon-purple);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skills-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, 
+        var(--neon-purple), 
+        var(--highlight-color), 
+        var(--accent-color)
+      );
+      animation: gradientFlow 3s linear infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-category {
+      padding: 1.5rem;
+      background: rgba(11, 10, 36, 0.7);
+      border: 1px solid var(--highlight-color);
+      position: relative;
+    }
+
+    .skill-category h3 {
+      color: var(--neon-yellow);
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 5px var(--neon-yellow);
+    }
+
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      background: rgba(1, 255, 255, 0.1);
+      border-left: 3px solid var(--highlight-color);
+      transition: all 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateX(5px);
+      background: rgba(1, 255, 255, 0.2);
+      box-shadow: 0 0 15px var(--highlight-color);
+    }
+
+    .skill-icon {
+      margin-right: 1rem;
+      color: var(--highlight-color);
+      font-size: 1.5rem;
+      text-shadow: 0 0 5px var(--highlight-color);
+    }
+
+    .skill-name {
+      color: var(--white);
+      font-family: 'VT323', monospace;
+      font-size: 1.2rem;
+    }
+
+    .about-section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: rgba(11, 10, 36, 0.7);
+      border: 1px solid var(--accent-color);
+    }
+
+    .about-text {
+      color: var(--white);
+      font-family: 'VT323', monospace;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      color: var(--highlight-color);
+      text-shadow: 0 0 5px var(--highlight-color);
+    }
+
+    /* Easter Egg */
+    .easter-egg {
+      position: fixed;
+      top: 50%;
+      right: -30px;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 60px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      opacity: 0.1;
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+
+    .easter-egg:hover {
+      opacity: 1;
+      right: 0;
+    }
+
+    .easter-egg img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 5px var(--neon-purple));
+    }
+
+    /* Command List Styles */
+    .command-list {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(11, 10, 36, 0.95);
+      border: 2px solid var(--highlight-color);
+      padding: 2rem;
+      z-index: 1000;
+      box-shadow: 0 0 20px var(--highlight-color);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .command-list.active {
+      display: block;
+    }
+
+    .command-list h3 {
+      color: var(--neon-yellow);
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .command-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .command-list li {
+      color: var(--white);
+      font-family: 'VT323', monospace;
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--neon-purple);
+    }
+
+    .command-list li span {
+      color: var(--highlight-color);
+    }
+
+    /* Selfie Image Styles */
+    .selfie-container {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    .selfie-image {
+      width: 200px;
+      height: 200px;
+      border: 2px solid var(--highlight-color);
+      box-shadow: 0 0 15px var(--highlight-color);
+      image-rendering: pixelated;
+      animation: glowPulse 2s infinite;
+    }
+
+    .selfie-caption {
+      margin-top: 0.5rem;
+      color: var(--neon-yellow);
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -658,6 +859,97 @@
         </article>
       </section>
     </main>
+
+    <!-- Tech Skills Section -->
+    <section class="skills-section">
+      <h2 class="section-title">// TECH SKILLS</h2>
+      <div class="skills-grid">
+        <!-- Core Technologies -->
+        <div class="skill-category">
+          <h3>Core Technologies</h3>
+          <ul class="skill-list">
+            <li class="skill-item"><i class="fab fa-python skill-icon"></i><span class="skill-name">Python</span></li>
+            <li class="skill-item"><i class="fab fa-swift skill-icon"></i><span class="skill-name">Swift</span></li>
+            <li class="skill-item"><i class="fab fa-golang skill-icon"></i><span class="skill-name">Go</span></li>
+          </ul>
+        </div>
+
+        <!-- Development Tools -->
+        <div class="skill-category">
+          <h3>Development Tools</h3>
+          <ul class="skill-list">
+            <li class="skill-item"><i class="fab fa-linux skill-icon"></i><span class="skill-name">Linux</span></li>
+            <li class="skill-item"><i class="fas fa-terminal skill-icon"></i><span class="skill-name">Bash</span></li>
+            <li class="skill-item"><i class="fab fa-git-alt skill-icon"></i><span class="skill-name">Git</span></li>
+          </ul>
+        </div>
+
+        <!-- Cloud & AI -->
+        <div class="skill-category">
+          <h3>Cloud & AI</h3>
+          <ul class="skill-list">
+            <li class="skill-item"><i class="fas fa-cloud skill-icon"></i><span class="skill-name">Cloud Technologies</span></li>
+            <li class="skill-item"><i class="fas fa-robot skill-icon"></i><span class="skill-name">AI Tools</span></li>
+            <li class="skill-item"><i class="fas fa-server skill-icon"></i><span class="skill-name">DevOps</span></li>
+          </ul>
+        </div>
+
+        <!-- Web & Mobile -->
+        <div class="skill-category">
+          <h3>Web & Mobile</h3>
+          <ul class="skill-list">
+            <li class="skill-item"><i class="fab fa-html5 skill-icon"></i><span class="skill-name">HTML/CSS</span></li>
+            <li class="skill-item"><i class="fab fa-apple skill-icon"></i><span class="skill-name">iOS Development</span></li>
+            <li class="skill-item"><i class="fas fa-mobile-alt skill-icon"></i><span class="skill-name">Mobile Apps</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <h2 class="section-title">// ABOUT ME</h2>
+      <p class="about-text">
+        <span class="highlight">🚀 Tech Enthusiast | AI Explorer | Software Developer | Aspiring Entrepreneur</span>
+      </p>
+      <p class="about-text">
+        As a Computer Engineer, I'm passionate about building, securing, and optimizing technology solutions. My journey revolves around exploring the fascinating intersection of AI, automation, application development, and tech innovation.
+      </p>
+      <p class="about-text">
+        <span class="highlight">⚡ Core Focus Areas:</span><br>
+        • Cybersecurity<br>
+        • Cloud Computing<br>
+        • Application Development<br>
+        • Process Automation
+      </p>
+      <p class="about-text">
+        <span class="highlight">🛠 Technical Expertise:</span><br>
+        I'm constantly sharpening my skills in Python, Linux, and App Development, while exploring new technologies and frameworks. My goal is to leverage these tools to create impactful solutions that make a difference.
+      </p>
+      <p class="about-text">
+        <span class="highlight">💡 Vision:</span><br>
+        On a journey to become an entrepreneur, I'm dedicated to creating innovative solutions that bridge technology gaps and solve real-world problems.
+      </p>
+    </section>
+  </div>
+
+  <!-- Easter Egg Button -->
+  <button class="easter-egg" id="easterEgg">
+    <img src="assets/diskette.png" alt="???">
+  </button>
+
+  <!-- Secret Commands List -->
+  <div class="command-list" id="commandList">
+    <h3>// SECRET COMMANDS</h3>
+    <ul>
+      <li><span>/dance</span> - Watch JENNY show off her moves</li>
+      <li><span>/outfit</span> - Change JENNY's pixel outfit</li>
+      <li><span>/joke</span> - Hear a totally rad 80s joke</li>
+      <li><span>/secret</span> - Discover hidden features</li>
+      <li><span>/selfie</span> - Get a totally tubular selfie</li>
+      <li><span>/yourfuture</span> - Discover what's next for JENNY</li>
+      <li><span>/help</span> - Show this command list</li>
+    </ul>
   </div>
 
   <!-- Retro Chatbot -->
@@ -877,12 +1169,17 @@
           if (i < text.length) {
             content.innerHTML = text.substring(0, i + 1);
             i++;
+            // Scroll during typing
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
             setTimeout(typeWriter, speed);
+          } else {
+            // Final scroll after typing is complete
+            setTimeout(() => {
+              messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 50);
           }
         }
         typeWriter();
-        
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
       }
       
       // Add user message
@@ -948,6 +1245,62 @@
         if (e.key === 'Enter') {
           sendMessage();
         }
+      });
+
+      // Add secret commands to JENNY's personality
+      jenny.secretCommands = {
+        '/dance': "*DIGITAL DANCE BREAK* 💃 Busting out my best pixel moves! Watch me moonwalk across your screen! *SYNTHWAVE INTENSIFIES*",
+        '/outfit': "*WARDROBE UPGRADE* 👗 Changed into my favorite pixel dress with matching neon accessories! How do I look?",
+        '/joke': "Why did the programmer quit his job? Because he didn't get arrays... *ROBOTIC LAUGHTER* Get it? A-RAYS? *WINKS IN 8-BIT*",
+        '/secret': "🤫 *WHISPERS IN BINARY* Legend says if you find the mysterious floppy disk, it might lead you to something totally radical...",
+        '/help': "ACCESSING HELP DATABASE... *BEEP BOOP* Here are my secret commands!",
+        '/selfie': "OMG, like, totally caught me at my best angle! *DIGITAL HAIR FLIP* 💁‍♀️ Here's my latest selfie with my new neon filter!",
+        '/yourfuture': "*MYSTERIOUS DIGITAL SPARKLE* 🌟 You got the secret... Barış is working on expanding my abilities for the future, just keep waiting! *WINKS IN NEON* Maybe I'll even get that 128kb RAM upgrade I've been dreaming about! *GIGGLES IN BINARY*"
+      };
+
+      // Function to create selfie message
+      function createSelfieMessage() {
+        const selfieContainer = document.createElement('div');
+        selfieContainer.className = 'selfie-container';
+        
+        const selfieImage = document.createElement('img');
+        selfieImage.src = 'assets/jenny-selfie.png';
+        selfieImage.className = 'selfie-image';
+        selfieImage.alt = 'RETRO-JENNY 87 Selfie';
+        
+        const caption = document.createElement('div');
+        caption.className = 'selfie-caption';
+        caption.textContent = '#NoFilter #RetroVibes #PixelPerfect';
+        
+        selfieContainer.appendChild(selfieImage);
+        selfieContainer.appendChild(caption);
+        
+        return selfieContainer.outerHTML;
+      }
+
+      // Update generateResponse to handle commands
+      const originalGenerateResponse = jenny.generateResponse;
+      jenny.generateResponse = function(input) {
+        const command = input.trim().toLowerCase();
+        if (command.startsWith('/')) {
+          if (command === '/help') {
+            document.getElementById('commandList').classList.add('active');
+            setTimeout(() => {
+              document.getElementById('commandList').classList.remove('active');
+            }, 5000);
+          }
+          if (command === '/selfie') {
+            return this.secretCommands[command] + createSelfieMessage();
+          }
+          return this.secretCommands[command] || "INVALID COMMAND... *SAD BEEP* Try /help for available commands!";
+        }
+        return originalGenerateResponse.call(this, input);
+      };
+
+      // Easter Egg Handler
+      const easterEgg = document.getElementById('easterEgg');
+      easterEgg.addEventListener('click', () => {
+        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
       });
     });
   </script>
