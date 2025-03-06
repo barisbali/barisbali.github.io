@@ -3,75 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>Baris Bali | Developer Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Orbitron:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+        :root {
+            --primary-color: #0b0a24;
+            --secondary-color: #1d0045;
+            --text-color: #ff71ce;
+            --highlight-color: #01ffff;
+            --accent-color: #ff00a5;
+            --neon-purple: #b967ff;
+            --neon-yellow: #fffb96;
+            --grid-color: rgba(1, 255, 255, 0.2);
+            --white: #f2f2f2;
+        }
+
+        /* Global Reset */
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
-            color: #24292e;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Orbitron', 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Grid and Effects */
+        .grid-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+            transform: perspective(500px) rotateX(60deg);
+            transform-origin: center center;
+            opacity: 0.25;
+            z-index: 1;
+        }
+
+        .sunset-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #ff71ce 0%, #b967ff 50%, #0b0a24 100%);
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* Header Styles */
         header {
-            background-color: #24292e;
-            color: white;
+            background-color: rgba(29, 0, 69, 0.9);
             padding: 2rem;
             text-align: center;
+            border-bottom: 2px solid var(--highlight-color);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 20px var(--highlight-color);
         }
+
+        header h1 {
+            color: var(--white);
+            font-family: 'Press Start 2P', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0 var(--accent-color),
+                        6px 6px 0 rgba(185, 103, 255, 0.5);
+        }
+
+        /* Navigation */
         nav {
-            background-color: #f6f8fa;
+            background-color: rgba(11, 10, 36, 0.9);
             padding: 1rem;
             text-align: center;
+            position: relative;
+            z-index: 2;
+            border-bottom: 2px solid var(--neon-purple);
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #0366d6;
+            color: var(--highlight-color);
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px var(--highlight-color);
         }
+
+        nav a:hover {
+            color: var(--neon-yellow);
+            text-shadow: 0 0 10px var(--neon-yellow);
+        }
+
+        /* Container */
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
+            position: relative;
+            z-index: 2;
         }
+
+        /* Blog Post Styles */
         .blog-post {
+            background: rgba(29, 0, 69, 0.8);
+            border: 2px solid var(--neon-purple);
             margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e1e4e8;
+            padding: 2rem;
+            position: relative;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px var(--neon-purple);
+            transition: transform 0.3s ease;
         }
+
+        /* Content Typography */
+        .blog-post .content {
+            max-width: 70ch;
+            margin: 0 auto;
+        }
+
         .blog-post h2 {
-            color: #24292e;
+            color: var(--white);
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            text-shadow: 0 0 5px var(--highlight-color);
         }
-        .date {
-            color: #586069;
-            font-size: 0.9rem;
+
+        .blog-post h3 {
+            color: var(--highlight-color);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+            text-shadow: 0 0 3px var(--highlight-color);
+        }
+
+        .blog-post h4 {
+            color: var(--neon-purple);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .blog-post p {
+            color: var(--white);
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Lists */
+        .blog-post ul, .blog-post ol {
+            color: var(--white);
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            margin: 1rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+
+        .blog-post li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Code Blocks */
+        .blog-post pre {
+            background: rgba(11, 10, 36, 0.9);
+            border: 1px solid var(--highlight-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            box-shadow: 0 0 10px rgba(1, 255, 255, 0.2);
+        }
+
+        .blog-post code {
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+            color: var(--neon-yellow);
+        }
+
+        .blog-post :not(pre) > code {
+            background: rgba(11, 10, 36, 0.9);
+            padding: 0.2rem 0.4rem;
+            border: 1px solid var(--highlight-color);
+        }
+
+        /* Images */
+        .blog-post img {
+            max-width: 100%;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            border: 2px solid var(--neon-purple);
+            box-shadow: 0 0 15px var(--neon-purple);
+        }
+
+        .blog-post figure {
+            margin: 2rem 0;
+        }
+
+        .blog-post figcaption {
+            text-align: center;
+            color: var(--neon-yellow);
+            font-family: 'VT323', monospace;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Blockquotes */
+        .blog-post blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            color: var(--neon-yellow);
+            font-style: italic;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: rgba(11, 10, 36, 0.9);
+            border: 2px solid var(--highlight-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 0 10px var(--highlight-color);
+        }
+
+        .toc-title {
+            color: var(--highlight-color);
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 3px var(--highlight-color);
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .toc a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+        }
+
+        .toc a:hover {
+            color: var(--highlight-color);
+            text-shadow: 0 0 5px var(--highlight-color);
+        }
+
+        /* Links */
+        .blog-post a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .blog-post a:hover {
+            border-bottom-color: var(--highlight-color);
+            text-shadow: 0 0 5px var(--highlight-color);
+        }
+
+        /* Tables */
+        .blog-post table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: rgba(11, 10, 36, 0.9);
+        }
+
+        .blog-post th, .blog-post td {
+            padding: 0.8rem;
+            border: 1px solid var(--neon-purple);
+            color: var(--white);
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+        }
+
+        .blog-post th {
+            background: rgba(185, 103, 255, 0.2);
+            color: var(--neon-yellow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-post {
+                padding: 1.5rem;
+            }
+
+            .blog-post h2 {
+                font-size: 1.3rem;
+            }
+
+            .blog-post p, .blog-post ul, .blog-post ol {
+                font-size: 1.1rem;
+            }
+
+            .blog-post pre {
+                padding: 1rem 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Background Effects -->
+    <div class="grid-background"></div>
+    <div class="sunset-gradient"></div>
+
     <header>
-        <h1>My Blog</h1>
+        <h1>DEVELOPER BLOG</h1>
     </header>
     
     <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="#about">About</a>
+        <a href="index.html">HOME</a>
+        <a href="blog.html">BLOG</a>
+        <a href="#about">ABOUT</a>
     </nav>
 
     <div class="container">
         <article class="blog-post">
-            <h2>First Blog Post</h2>
-            <p class="date">January 1, 2024</p>
-            <p>This is my first blog post. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-               Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>Building a Retro-Cyberpunk Portfolio</h2>
+            <span class="date">JANUARY 15, 2024</span>
+            <div class="toc">
+                <h3 class="toc-title">TABLE OF CONTENTS</h3>
+                <ul>
+                    <li><a href="#inspiration">Inspiration</a></li>
+                    <li><a href="#design-decisions">Design Decisions</a></li>
+                    <li><a href="#technical-challenges">Technical Challenges</a></li>
+                    <li><a href="#implementation">Implementation</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3 id="inspiration">Inspiration</h3>
+                <p>Today I want to share my experience building this retro-cyberpunk themed portfolio website. 
+                   The inspiration came from my love for 80s aesthetics and cyberpunk culture.</p>
+                
+                <h3 id="design-decisions">Design Decisions</h3>
+                <p>When approaching the design, I focused on several key elements:</p>
+                <ul>
+                    <li>Neon color palette inspired by synthwave aesthetics</li>
+                    <li>Grid-based background reminiscent of 80s sci-fi</li>
+                    <li>Retro-futuristic typography using pixel-style fonts</li>
+                </ul>
+
+                <h3 id="technical-challenges">Technical Challenges</h3>
+                <p>Here's an example of the grid background implementation:</p>
+                <pre><code>.grid-background {
+    background: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    transform: perspective(500px) rotateX(60deg);
+}</code></pre>
+
+                <h3 id="implementation">Implementation</h3>
+                <p>The implementation focused on creating smooth animations and maintaining performance...</p>
+            </div>
+            <div class="tags">
+                <span class="tag">Web Design</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML5</span>
+            </div>
         </article>
 
         <article class="blog-post">
-            <h2>Second Blog Post</h2>
-            <p class="date">January 2, 2024</p>
-            <p>This is my second blog post. Ut enim ad minim veniam, quis nostrud exercitation 
-               ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h2>Creating RETRO-JENNY 87: My AI Chatbot</h2>
+            <span class="date">March 6, 2025</span>
+            <p>Meet RETRO-JENNY 87, my custom AI chatbot with a retro personality. In this post, I'll explain
+               how I implemented the chatbot using vanilla JavaScript and created its unique personality.</p>
+            <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">AI</span>
+                <span class="tag">UX Design</span>
+            </div>
         </article>
     </div>
+
+    <script>
+        // Add any interactive features here
+    </script>
 </body>
-</html></div>
+</html>
