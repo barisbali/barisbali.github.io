@@ -792,6 +792,35 @@
       color: var(--neon-yellow);
       font-style: italic;
     }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border: 2px solid var(--neon-purple);
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .project-image:hover {
+      transform: scale(1.02);
+    }
+
+    .project-card .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .project-card .website-link {
+      flex: 1;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .project-card .website-link i {
+      margin-right: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -859,6 +888,33 @@
           </div>
           <a href="/retro-jenny.html" class="website-link" target="_blank">VISIT</a>
         </article>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <h3 class="project-title">Burn The Letter 🔥</h3>
+          <img 
+              src="assets/burn-letter-preview.jpg" 
+              alt="Burn The Letter Preview" 
+              class="project-image"
+              onerror="this.style.display='none'"
+          >
+          <p class="project-description">
+              A therapeutic web app for writing and burning letters, featuring mood detection and custom burn effects
+          </p>
+          <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+          </div>
+          <div class="button-group">
+              <a href="https://barisbali.github.io/Burn-The-Letter" class="website-link" target="_blank">
+                  <i class="fas fa-fire"></i> Try it
+              </a>
+              <a href="https://github.com/barisbali/Burn-The-Letter" class="website-link" target="_blank">
+                  <i class="fab fa-github"></i> View Code
+              </a>
+          </div>
+        </div>
       </section>
     </main>
 
