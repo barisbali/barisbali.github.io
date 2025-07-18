@@ -4,184 +4,73 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Retro Jenny - Your AI Companion</title>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #0b0a24;
-      --secondary-color: #1d0045;
-      --text-color: #ff71ce;
-      --highlight-color: #01ffff;
-      --accent-color: #ff00a5;
-      --neon-purple: #b967ff;
-      --neon-yellow: #fffb96;
-      --grid-color: rgba(1, 255, 255, 0.2);
-      --white: #f2f2f2;
-      --card-shadow: rgba(255, 0, 165, 0.4);
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
-      background-color: var(--primary-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .scanlines, .grid-background, .sunset-gradient {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    .scanlines {
-      background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.05) 50%);
-      background-size: 100% 4px;
-      animation: scanline 8s linear infinite;
-    }
-
-    @keyframes scanline {
-      from { transform: translateY(-50%); }
-      to { transform: translateY(50%); }
-    }
-
-    .grid-background {
-      background: linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
-      background-size: 40px 40px;
-      opacity: 0.2;
-      transform: perspective(500px) rotateX(60deg);
-    }
-
-    .sunset-gradient {
-      background: linear-gradient(to bottom, #ff71ce, #b967ff, #0b0a24);
-      opacity: 0.15;
-    }
-
-    h1 {
-      text-align: center;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 2rem;
-      color: var(--white);
-      text-shadow: 3px 3px var(--accent-color), 6px 6px rgba(185, 103, 255, 0.5);
-      margin-bottom: 30px;
-    }
-
-    .feature-card {
-      background: rgba(29, 0, 69, 0.8);
-      border: 2px solid var(--neon-purple);
-      box-shadow: 0 0 15px var(--neon-purple);
-      padding: 20px;
-      margin-bottom: 20px;
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px var(--accent-color);
-    }
-
-    .feature-card h2 {
-      color: var(--highlight-color);
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.5rem;
-    }
-
-    .hero-image, .emotion-image, .feature-image, .promo-image {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto 30px auto;
-      border: 2px solid var(--highlight-color);
-      box-shadow: 0 0 15px var(--neon-purple);
-      transition: transform 0.3s ease;
-    }
-
-    .hero-image:hover, .emotion-image:hover, .feature-image:hover, .promo-image:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 25px var(--accent-color);
-    }
-
-    .back-link {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      padding: 0.6rem 1.2rem;
-      background: transparent;
-      color: var(--highlight-color);
-      border: 2px solid var(--highlight-color);
-      font-family: 'VT323', monospace;
-      text-decoration: none;
-      transition: 0.3s;
-      z-index: 100;
-    }
-
-    .back-link:hover {
-      background: var(--highlight-color);
-      color: var(--primary-color);
-    }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 1.5rem; }
-      .feature-card h2 { font-size: 1.2rem; }
-      .container { padding: 20px 15px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-  <div class="grid-background"></div>
-  <div class="sunset-gradient"></div>
-  <div class="scanlines"></div>
+<body class="jenny-page-body">
 
-  <a href="index.html" class="back-link">&lt; BACK TO HOME</a>
+  <a href="index.html" class="back-link">&lt; HOME</a>
 
-  <div class="container">
-    <h1>RETRO JENNY</h1>
-    <img src="assets/hero-picture.png" alt="Retro Jenny Hero Image" class="hero-image">
+  <div class="jenny-container">
 
-    <div class="feature-card">
-      <h2>What is Retro Jenny?</h2>
-      <p>Retro Jenny is your fun, AI-powered companion designed to assist, entertain, and engage through natural conversation and personality-rich interactions.</p>
-    </div>
+    <header class="jenny-header">
+      <h1>Meet Retro Jenny</h1>
+      <p>Your fun, AI-powered companion designed to assist, entertain, and engage through personality-rich conversations. Try her out below!</p>
+      
+      <div id="chat-container">
+          </div>
+    </header>
 
-    <img src="assets/retro-jenny-emotions.png" alt="Retro Jenny Emotion Sheet" class="emotion-image">
+    <section class="section">
+      <h2>Why is Jenny Different?</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="icon"><i class="fas fa-brain"></i></div>
+          <h3>Conversational AI</h3>
+          <p>Powered by modern LLM technology for natural, flowing conversations that go beyond simple commands.</p>
+        </div>
+        <div class="feature-item">
+          <div class="icon"><i class="fas fa-puzzle-piece"></i></div>
+          <h3>Easy Integration</h3>
+          <p>Designed with a modular architecture that can be easily embedded into websites and applications.</p>
+        </div>
+        <div class="feature-item">
+          <div class="icon"><i class="fas fa-heart"></i></div>
+          <h3>Emotional Intelligence</h3>
+          <p>Built to understand context and nuance, providing more empathetic and engaging interactions.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="feature-card">
-      <h2>Main Features</h2>
-      <ul>
-        <li>Conversational AI with LLM technology.</li>
-        <li>Cheerful and customizable personality.</li>
-        <li>Automation of simple everyday tasks.</li>
-        <li>Emotional intelligence for empathetic interactions.</li>
-        <li>Easy integration into apps and websites.</li>
-      </ul>
-    </div>
+    <section class="section">
+        <h2>A Personality That Shines</h2>
+        <div class="showcase-item">
+            <div class="showcase-text">
+                <h3>Dynamic & Expressive</h3>
+                <p>Jenny isn't just a robot. Her personality is the core of the experience, designed to be cheerful, customizable, and genuinely fun to talk to.</p>
+            </div>
+            <div class="showcase-image">
+                <img src="assets/images/retro-jenny-emotions.png" alt="Retro Jenny Emotion Sheet" onerror="this.style.display='none'">
+            </div>
+        </div>
+        <div class="showcase-item">
+            <div class="showcase-text">
+                <h3>More Than Just Chat</h3>
+                <p>From automating simple daily tasks to being an entertaining sidekick when you're bored, Jenny is built to be a versatile and useful AI companion.</p>
+            </div>
+            <div class="showcase-image">
+                <img src="assets/images/retro-jenny-features.png" alt="Retro Jenny Features" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </section>
 
-    <img src="assets/retro-jenny-features.png" alt="Retro Jenny Features" class="feature-image">
-
-    <div class="feature-card">
-      <h2>Use Cases</h2>
-      <p>Ideal for entertainment, productivity apps, customer service, or as an engaging digital assistant—perfect for fun when you're bored.</p>
-    </div>
-
-    <img src="assets/retro-jenny-hero-section.png" alt="Promo Material" class="promo-image">
-
-    <div class="feature-card">
-      <p>This experimental project helps me understand NLP and ML applications. I handle every aspect—from visual design to model training. I always wanted my own AI companion. And yes, I'm a Tony Stark fan!</p>
-    </div>
   </div>
+
+  <footer class="jenny-footer">
+      <p>This experimental project helps me understand NLP and ML applications.<br>I handle every aspect—from visual design to model training. And yes, I'm a Tony Stark fan!</p>
+  </footer>
+
+  <script src="js/retro-jenny.js"></script>
 </body>
 </html>
