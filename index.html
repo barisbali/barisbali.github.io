@@ -1,166 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Baris Bali's portfolio featuring projects and skills in software development and technology." />
-  <title>Baris Bali | Developer Portfolio</title>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barış Bali - Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <div class="grid-background"></div>
-  <div class="sunset-gradient"></div>
-  <div class="scanlines"></div>
-  <div id="particles-js"></div>
 
-  <div class="container">
-    <header>
-      <img src="https://github.com/barisbali.png" alt="Baris Bali Profile Picture" class="profile-img" loading="lazy">
-      <h1>BARIS BALI</h1>
-      <p class="tagline">SOFTWARE DEVELOPER & TECH ENTHUSIAST</p>
-      <div class="social-links">
-        <a href="https://github.com/barisbali" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/barisbali" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com/barisbali" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      </div>
-      <div class="button-group">
-        <a href="https://barisbali.com" class="website-link" target="_blank">VISIT MY WEBSITE</a>
-        <a href="/blog.html" class="website-link">DEV BLOG</a>
-      </div>
-    </header>
-
-    <main>
-      <h2 class="section-title">// PROJECTS</h2>
-      <section class="projects-grid">
-        <article class="project-card">
-          <h3 class="project-title">Rektonic AI Habit Tracking</h3>
-          <p class="project-description">A habit-tracking app that roasts you into self-improvement.</p>
-          <div class="tags">
-            <span class="tag">Swift</span>
-            <span class="tag">Python</span>
-            <span class="tag">Firebase</span>
-          </div>
-          <a href="https://www.rektonic.com/" class="website-link" target="_blank">VISIT</a>
-        </article>
-
-        <article class="project-card">
-          <h3 class="project-title">GitHub Pages Portfolio</h3>
-          <p class="project-description">The page you are currently viewing</p>
-          <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <h3 class="project-title">Jenny The Chat Bot</h3>
-          <p class="project-description">A fun 80's inspired chat bot I'm currently developing. It's in very early stage. You can use the small extremely basic version of her on this page. Just click on the left bottom Jenny icon to start chatting.</p>
-          <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">Python</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <a href="/retro-jenny.html" class="website-link" target="_blank">VISIT</a>
-        </article>
-
-        <div class="project-card">
-          <h3 class="project-title">Burn The Letter 🔥</h3>
-          <img 
-              src="assets/images/burn-letter-preview.jpg" 
-              alt="Burn The Letter Preview" 
-              class="project-image"
-              onerror="this.style.display='none'"
-          >
-          <p class="project-description">
-              A therapeutic web app for writing and burning letters, featuring mood detection and custom burn effects
-          </p>
-          <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-          </div>
-          <div class="button-group">
-              <a href="https://barisbali.github.io/burn-the-letter" class="website-link" target="_blank">
-                  <i class="fas fa-fire"></i> Try it
-              </a>
-              <a href="https://github.com/barisbali/burn-the-letter" class="website-link" target="_blank">
-                  <i class="fab fa-github"></i> View Code
-              </a>
-          </div>
+    <!-- Navigation Bar (Reused from your portfolio) -->
+    <nav>
+        <div class="logo"><i class="fas fa-code"></i> Barış Bali's Projects</div>
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span id="themeIcon">🌙</span>
+            </button>
         </div>
-      </section>
+    </nav>
 
-      <h2 class="section-title">// ABOUT_ME_</h2>
-<section class="about-section">
-  <p>
-    <span class="highlight">🚀 Tech Enthusiast | AI Explorer | Software Developer | Aspiring Entrepreneur</span>
-  </p>
-  <p>
-    As a Computer Engineer, I'm passionate about building, securing, and optimizing technology solutions. My journey revolves around exploring the fascinating intersection of AI, automation, application development, and tech innovation.
-  </p>
-  <p>
-    <span class="highlight">💡 Vision:</span><br>
-    On a journey to become an entrepreneur, I'm dedicated to creating innovative solutions that bridge technology gaps and solve real-world problems.
-  </p>
-</section>
+    <!-- Main Project Grid -->
+    <main class="project-container">
+        <header class="project-hero">
+            <h1>My Projects</h1>
+            <p>A curated collection of my work, from native iOS apps to web experiments and game prototypes.</p>
+        </header>
 
-<h2 class="section-title">// SKILLS_</h2>
-<section class="skills-grid">
-  <div class="skill-category">
-    <h3><i class="fas fa-code skill-icon"></i> Languages</h3>
-    <ul class="skill-list">
-      <li class="skill-item">Python</li>
-      <li class="skill-item">Swift</li>
-      <li class="skill-item">Go</li>
-      <li class="skill-item">C# (Unity)</li>
-    </ul>
-  </div>
-  <div class="skill-category">
-    <h3><i class="fas fa-shield-alt skill-icon"></i> Security & Infra</h3>
-    <ul class="skill-list">
-      <li class="skill-item">Cybersecurity</li>
-      <li class="skill-item">Google Cloud</li>
-      <li class="skill-item">AWS Essentials</li>
-      <li class="skill-item">Automation</li>
-    </ul>
-  </div>
-  <div class="skill-category">
-    <h3><i class="fas fa-robot skill-icon"></i> AI & Development</h3>
-    <ul class="skill-list">
-      <li class="skill-item">Machine Learning & NLP</li>
-      <li class="skill-item">iOS Development</li>
-      <li class="skill-item">Unity Engine</li>
-      <li class="skill-item">HTML & CSS</li>
-    </ul>
-  </div>
-</section>
+        <div class="project-grid">
+
+            <!-- Project Card 1: Rektonic (iOS) -->
+            <div class="glass-card project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <img src="assets/icons/rektonic-habit-icon.png" alt="Rektonic App Icon">
+                    </div>
+                    <div class="project-title-group">
+                        <h3>Rektonic: Task Tracker</h3>
+                        <p>AI-Powered Minimalist Habit Tracker</p>
+                    </div>
+                    <span class="type-tag ios">
+                        <i class="fab fa-apple"></i> iOS App
+                    </span>
+                </div>
+                <p class="project-summary">
+                    Rektonic is the task app that stops coddling you. We scrap mediocre 'good jobs' for the cold, hard truth: the bottle represents your commitment, and its emptiness is your victory.
+                </p>
+                <div class="project-tech-stack">
+                    <span>SwiftUI</span>
+                    <span>CoreData</span>
+                    <span>FoundationModels</span>
+                    <span>AI</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://www.rektonic.com/" target="_blank" class="glass-button"><i class="fab fa-app-store"></i> More</a>
+                  
+                </div>
+                
+                <!-- Drawer System -->
+                <button class="drawer-toggle">
+                    <span class="drawer-toggle-text">Read More</span> <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-drawer">
+                    <div class="drawer-content">
+                        <h4>About This Project</h4>
+                        <p>Rektonic was born from a frustration with overly-positive productivity apps. It targets users who prefer raw, unfiltered feedback. The core metaphor is a bottle that fills with "liquid" for incomplete tasks, and "empties" as you complete them. The goal is an empty bottle, a clear mind.</p>
+                        
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Minimalist, gesture-based UI.</li>
+                            <li><i class="fas fa-check"></i> AI-powered suggestions for breaking down large tasks.</li>
+                            <li><i class="fas fa-check"></i> CoreData for robust, on-device persistence.</li>
+                            <li><i class="fas fa-check"></i> Haptic feedback and custom animations for a tactile feel.</li>
+                        </ul>
+                        
+                        <h4>Technical Challenges</h4>
+                        <p>The main challenge was creating the custom liquid-fill animation in SwiftUI, which required custom paths and animatable vector shapes. Integrating the on-device AI model without sacrificing performance was also a significant hurdle, solved by using lightweight FoundationModels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2: Legacy Runner (Game) -->
+            <div class="glass-card project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <img src="assets/icons/legacy-runner-icon.png" alt="Legacy Runner Icon">
+                    </div>
+                    <div class="project-title-group">
+                        <h3>Legacy Runner</h3>
+                        <p>Endless Runner with a Twist</p>
+                    </div>
+                    <span class="type-tag game">
+                        <i class="fas fa-gamepad"></i> Game
+                    </span>
+                </div>
+                <p class="project-summary">
+                    An endless runner where every death is a new start. Choices you make in one life (moral choices, power-ups collected) directly impact the skills and world of your next life.
+                </p>
+                <div class="project-tech-stack">
+                    <span>Unity</span>
+                    <span>C#</span>
+                    <span>Blender</span>
+                    <span>Procedural Generation</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://kenanege.itch.io/legacy-runner" target="_blank" class="glass-button"><i class="fas fa-play"></i> Itch.io</a>
+                   
+                </div>
+
+                <!-- Drawer System -->
+                <button class="drawer-toggle">
+                    <span class="drawer-toggle-text">Read More</span> <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-drawer">
+                    <div class="drawer-content">
+                        <h4>About This Project</h4>
+                        <p>This project explores themes of consequence and legacy. Instead of a simple high-score, the player's goal is to build a better "legacy" for their next playthrough. Power-ups collected only activate after you die, adding a layer of strategic sacrifice.</p>
+                        
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Procedurally generated levels.</li>
+                            <li><i class="fas fa-check"></i> "Legacy" system that carries stats and choices across runs.</li>
+                            <li><i class="fas fa-check"></i> Custom physics and character controller.</li>
+                            <li><i class="fas fa-check"></i> All 3D models and animations created in Blender.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3: Portfolio (Web) -->
+            <div class="glass-card project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <img src="assets/icons/baris-hero.png" alt="Portfolio Icon">
+                    </div>
+                    <div class="project-title-group">
+                        <h3>Personal Portfolio</h3>
+                        <p>Liquid-Glass v1 Portfolio</p>
+                    </div>
+                    <span class="type-tag web">
+                        <i class="fas fa-globe"></i> Web
+                    </span>
+                </div>
+                <p class="project-summary">
+                    The very portfolio you're inspired by. A fully responsive, single-page website built with pure HTML, CSS, and JavaScript, featuring a "liquid glass" aesthetic and a dark/light mode toggle.
+                </p>
+                <div class="project-tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript (ES6+)</span>
+                    <span>Responsive Design</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://www.barisbali.com/" target="_blank" class="glass-button"><i class="fas fa-eye"></i> Live Site</a>
+                    
+                </div>
+
+                <!-- Drawer System -->
+                <button class="drawer-toggle">
+                    <span class="drawer-toggle-text">Read More</span> <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="project-drawer">
+                    <div class="drawer-content">
+                        <h4>About This Project</h4>
+                        <p>The goal was to build a personal site from scratch *without* frameworks. This allowed for complete control over performance and aesthetics. The "liquid glass" effect is achieved through CSS `backdrop-filter` and layered gradients.</p>
+                        
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Pure Vanilla JS for all interactions (no jQuery).</li>
+                            <li><i class="fas fa-check"></i> Theme toggle with `localStorage` persistence.</li>
+                            <li><i class="fas fa-check"></i> Mobile-first, fully responsive layout.</li>
+                            <li><i class="fas fa-check"></i> Animated skills tags and hover effects.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </main>
-  </div>
 
-  <button class="easter-egg" id="easterEgg">
-    <img src="assets/images/diskette.png" alt="???">
-  </button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Barış Bali. Not all projects are open sourced. For more info please contact on www.barisbali.com</p>
+            <div class="social-links">
+                <a href="https://x.com/codebarba" target="_blank" class="social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/barisbali" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/barisbali" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-  <div class="command-list" id="commandList">
-    <h3>// SECRET COMMANDS</h3>
-    <ul>
-      <li><span>/dance</span> - Watch JENNY show off her moves</li>
-      <li><span>/outfit</span> - Change JENNY's pixel outfit</li>
-      <li><span>/joke</span> - Hear a totally rad 80s joke</li>
-      <li><span>/secret</span> - Discover hidden features</li>
-      <li><span>/selfie</span> - Get a totally tubular selfie</li>
-      <li><span>/yourfuture</span> - Discover what's next for JENNY</li>
-      <li><span>/help</span> - Show this command list</li>
-    </ul>
-  </div>
-
-  <script src="js/particles.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/chatbot.js"></script>
-
+    <!-- Full-screen overlay for the modal (optional, but good for UX) -->
+    <div class="overlay" id="overlay"></div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
