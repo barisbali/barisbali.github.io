@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rektonic - Project Details</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom Styles (One level up) -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <nav>
+            <a href="../index.html" class="logo">
+                <i class="fas fa-crosshairs"></i> BARIŞ_BALİ // PROJECTS
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link"><i class="fas fa-arrow-left"></i> BACK TO SHOWCASE</a>
+                <a href="https://www.rektonic.com/" target="_blank" class="nav-link tact-glow"><i
+                        class="fab fa-app-store"></i> VIEW APP</a>
+            </div>
+        </nav>
+
+        <main class="projects-section">
+            <header class="section-header"
+                style="flex-direction: column; align-items: flex-start; gap: 1rem; border-bottom: none; padding-top: 4rem;">
+                <div class="sys-status" style="color: var(--neon-cyan);">
+                    <style>
+                        .sys-status.cyan::before {
+                            background-color: var(--neon-cyan);
+                            box-shadow: 0 0 8px var(--neon-cyan);
+                        }
+                    </style>
+                    <span class="sys-status cyan">PROJECT TYPE: iOS APP</span>
+                </div>
+                <h1 class="hero-title">REKTONIC: TASK TRACKER</h1>
+                <p class="hero-subtitle">AI-Powered Minimalist Habit Tracker</p>
+            </header>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h3 class="project-title" style="color: var(--neon-cyan);"><i class="fas fa-info-circle"></i> ABOUT THIS
+                    APP</h3>
+                <p class="project-desc" style="font-size: 1.1rem; max-width: 800px;">
+                    Rektonic was born from a frustration with overly-positive productivity apps. It targets users who
+                    prefer raw, unfiltered feedback. The core metaphor is a bottle that fills with "liquid" for
+                    incomplete tasks, and "empties" as you complete them. The goal is an empty bottle, a clear mind.
+                </p>
+
+                <h3 class="project-title" style="color: var(--neon-pink); margin-top: 2rem;"><i class="fas fa-bolt"></i>
+                    KEY FEATURES</h3>
+                <ul class="project-desc"
+                    style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 10px;">
+                    <li><i class="fas fa-check-square" style="color: var(--neon-pink);"></i> Minimalist, gesture-based
+                        UI.</li>
+                    <li><i class="fas fa-check-square" style="color: var(--neon-pink);"></i> AI-powered suggestions for
+                        breaking down large tasks.</li>
+                    <li><i class="fas fa-check-square" style="color: var(--neon-pink);"></i> CoreData for robust,
+                        on-device persistence.</li>
+                    <li><i class="fas fa-check-square" style="color: var(--neon-pink);"></i> Haptic feedback and custom
+                        animations for a tactile feel.</li>
+                </ul>
+
+                <h3 class="project-title" style="color: var(--neon-yellow); margin-top: 2rem;"><i
+                        class="fas fa-bug"></i> TECHNICAL CHALLENGES</h3>
+                <p class="project-desc" style="font-size: 1.1rem; max-width: 800px;">
+                    The main challenge was creating the custom liquid-fill animation in SwiftUI, which required custom
+                    paths and animatable vector shapes. Integrating the on-device AI model without sacrificing
+                    performance was also a significant hurdle, solved by using lightweight FoundationModels.
+                </p>
+
+                <div class="tech-stack" style="margin-top: 2rem;">
+                    <span class="tech-tag"
+                        style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">SwiftUI</span>
+                    <span class="tech-tag"
+                        style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">CoreData</span>
+                    <span class="tech-tag"
+                        style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">FoundationModels</span>
+                    <span class="tech-tag"
+                        style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">AI</span>
+                </div>
+            </div>
+
+            <a href="../index.html" class="tactile-btn"><i class="fas fa-chevron-left"></i> RETURN TO MAIN</a>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2026 BARIS BALI. END OF LINE.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

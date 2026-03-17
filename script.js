@@ -1,58 +1,68 @@
-// --- Theme Toggle Logic (Reused from Portfolio) ---
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
-const html = document.documentElement;
+/**
+ * Retro-Futuristic Terminal interactions
+ */
 
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-html.setAttribute('data-theme', currentTheme);
-updateThemeIcon(currentTheme);
+document.addEventListener('DOMContentLoaded', () => {
 
-themeToggle.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-});
+    // 1. Text Glitch Effect on Hover
+    const glitchTexts = document.querySelectorAll('.glitch-text');
 
-function updateThemeIcon(theme) {
-    themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
-}
+    glitchTexts.forEach(el => {
+        el.addEventListener('mouseover', () => {
+            const originalText = el.getAttribute('data-text') || el.innerText;
+            el.setAttribute('data-text', originalText);
 
+            let iterations = 0;
+            const interval = setInterval(() => {
+                el.innerText = originalText.split('')
+                    .map((letter, index) => {
+                        if (index < iterations) {
+                            return originalText[index];
+                        }
+                        return String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                    })
+                    .join('');
 
-// --- NEW: Drawer System Logic ---
+                if (iterations >= originalText.length) {
+                    clearInterval(interval);
+                    el.innerText = originalText;
+                }
+                iterations += 1 / 3;
+            }, 30);
+        });
+    });
 
-// 1. Get all the drawer toggle buttons
-const allToggles = document.querySelectorAll('.drawer-toggle');
+    // 2. Typewriter Effect for System Status
+    const sysStatuses = document.querySelectorAll('.sys-status');
 
-// 2. Loop over each button
-allToggles.forEach(toggle => {
-    
-    // 3. Add a click event listener
-    toggle.addEventListener('click', () => {
-        
-        // 4. Find the parent card, then the drawer *inside* that card
-        //    This is much safer and fixes the "all drawers open" bug.
-        const card = toggle.closest('.project-card');
-        const drawer = card.querySelector('.project-drawer');
-        
-        // 5. Find the text span (Read More / Show Less)
-        const toggleText = toggle.querySelector('.drawer-toggle-text');
+    sysStatuses.forEach(status => {
+        const text = status.innerText;
+        status.innerText = '';
 
-        // 6. Check if the drawer is already open
-        const isActive = drawer.classList.contains('active');
+        // Add a slight delay before typing starts to simulate boot-up
+        setTimeout(() => {
+            let i = 0;
+            const typeInterval = setInterval(() => {
+                status.innerText += text.charAt(i);
+                i++;
+                if (i >= text.length) {
+                    clearInterval(typeInterval);
+                }
+            }, 50); // 50ms per character
+        }, Math.random() * 500 + 200);
+    });
 
-        // 7. Toggle the 'active' class on the button and drawer
-        toggle.classList.toggle('active');
-        drawer.classList.toggle('active');
-
-        // 8. Update the button text
-        if (isActive) {
-            toggleText.textContent = 'Read More';
-        } else {
-            toggleText.textContent = 'Show Less';
-        }
+    // 3. Tactile Button Click Effect (Optional auditory illusion through visual snap)
+    const tactileBtns = document.querySelectorAll('.tactile-btn');
+    tactileBtns.forEach(btn => {
+        btn.addEventListener('mousedown', () => {
+            btn.style.transform = 'translateY(4px)';
+        });
+        btn.addEventListener('mouseup', () => {
+            btn.style.transform = 'translateY(0)';
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translateY(0)';
+        });
     });
 });

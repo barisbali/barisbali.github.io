@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerLog - Project Details</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <nav>
+            <a href="../index.html" class="logo">
+                <i class="fas fa-crosshairs"></i> BARIŞ_BALİ // PROJECTS
+            </a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link"><i class="fas fa-arrow-left"></i> BACK TO SHOWCASE</a>
+                <a href="https://github.com/barisbali" target="_blank" class="nav-link tact-glow"><i
+                        class="fab fa-github"></i> VIEW CODE</a>
+            </div>
+        </nav>
+
+        <main class="projects-section">
+            <header class="section-header"
+                style="flex-direction: column; align-items: flex-start; gap: 1rem; border-bottom: none; padding-top: 4rem;">
+                <div class="sys-status" style="color: var(--neon-yellow);">
+                    <style>
+                        .sys-status.yellow::before {
+                            background-color: var(--neon-yellow);
+                            box-shadow: 0 0 8px var(--neon-yellow);
+                        }
+                    </style>
+                    <span class="sys-status yellow">PROJECT TYPE: WEB PLATFORM</span>
+                </div>
+                <h1 class="hero-title">GAMERLOG</h1>
+                <p class="hero-subtitle">Grad Project: AI-Powered Game Recommendations</p>
+            </header>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                
+                <!-- Images Section -->
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="../assets/icons/gamer-log-images/gamerlog1.png" alt="GamerLog Screenshot 1"></div>
+                    <div class="gallery-item"><img src="../assets/icons/gamer-log-images/gamerlog2.png" alt="GamerLog Screenshot 2"></div>
+                    <div class="gallery-item"><img src="../assets/icons/gamer-log-images/gamerlog3.png" alt="GamerLog Screenshot 3"></div>
+                    <div class="gallery-item"><img src="../assets/icons/gamer-log-images/gamerlog4.png" alt="GamerLog Screenshot 4"></div>
+                    <div class="gallery-item"><img src="../assets/icons/gamer-log-images/gamerlog5.png" alt="GamerLog Screenshot 5"></div>
+                    <div class="gallery-item"><img src="../assets/icons/gamer-log-images/gamerlog6.png" alt="GamerLog Screenshot 6"></div>
+                    <div class="gallery-item"><img src="../assets/icons/gamer-log-images/gamerlog7.png" alt="GamerLog Screenshot 7"></div>
+                </div>
+
+                <h3 class="project-title" style="color: var(--neon-cyan);"><i class="fas fa-info-circle"></i> ABOUT THIS PROJECT</h3>
+                <p class="project-desc" style="font-size: 1.1rem; max-width: 800px;">
+                    GamerLog is a Django-based platform where players build a visual game library, rate &amp; review titles, and get personalized recommendations powered by the Surprise library. From your profile, the Toss Me a Game button suggests smart picks based on what you've played and liked.
+                </p>
+
+                <h3 class="project-title" style="color: var(--neon-pink); margin-top: 2rem;"><i class="fas fa-bolt"></i> KEY FEATURES</h3>
+                <ul class="project-desc" style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 10px;">
+                    <li><i class="fas fa-check-square" style="color: var(--neon-pink);"></i> <strong style="color: #fff;">Personal collections:</strong> curate your library with covers, ratings, and notes.</li>
+                    <li><i class="fas fa-check-square" style="color: var(--neon-pink);"></i> <strong style="color: #fff;">Smart discoverability:</strong> recommendations from collaborative filtering on your activity.</li>
+                    <li><i class="fas fa-check-square" style="color: var(--neon-pink);"></i> <strong style="color: #fff;">Social-ready:</strong> future-friendly for sharing collections and exploring others' shelves.</li>
+                </ul>
+
+                <h3 class="project-title" style="color: var(--neon-yellow); margin-top: 2rem;"><i class="fas fa-cogs"></i> ARCHITECTURE &amp; ENGINEERING</h3>
+                <p class="project-desc" style="font-size: 1.1rem; max-width: 800px;">
+                    Architected a comprehensive data-processing ecosystem integrating real-time data feeds, algorithmic recommendation logic, and scalable cloud infrastructure. 
+                    <br><br>
+                    Engineered robust recommendation systems across vast datasets using predictive models like Matrix Factorization and KNN classification, paired with efficient data manipulation in NumPy. Operationalized the full stack with seamless AWS integrations, automated data extraction pipelines, and GPT-powered conversational handlers.
+                    <br><br>
+                    Successfully delivered a highly scalable, cloud-deployed logic engine capable of synthesizing dynamic and personalized recommendations from complex and unstructured inputs.
+                </p>
+
+                <div class="tech-stack" style="margin-top: 2rem;">
+                    <span class="tech-tag" style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">Django</span>
+                    <span class="tech-tag" style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">Python</span>
+                    <span class="tech-tag" style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">Bootstrap 5</span>
+                    <span class="tech-tag" style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">SQLite</span>
+                    <span class="tech-tag" style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">AWS</span>
+                    <span class="tech-tag" style="border: 1px solid var(--neon-cyan); color: var(--neon-cyan);">Machine Learning</span>
+                </div>
+            </div>
+
+            <a href="../index.html" class="tactile-btn"><i class="fas fa-chevron-left"></i> RETURN TO MAIN</a>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2026 BARIS BALI. END OF LINE.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
