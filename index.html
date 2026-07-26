@@ -4,183 +4,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barış Bali - Project Showcase</title>
+    <title>Barış Bali | Computer Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Barış Bali — Computer Engineer specializing in native iOS development, AI recommendation engines, embedded simulations, and high-performance web engineering.">
 
-    <!-- Google Fonts for Tactical MFD look (Turkish Supported) -->
+    <!-- Google Fonts with Turkish Glyph Support -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rajdhani:wght@500;600;700;800&family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Custom Styles -->
+    <!-- Custom Tactical Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <!-- Background Radar & Particle Canvas Engine -->
+    <canvas id="radar-canvas"></canvas>
+
     <div class="main-wrapper">
-        <!-- Navigation -->
+        <!-- Telemetry Top Status Ticker -->
+        <div class="telemetry-ticker">
+            <div class="telemetry-left">
+                <span class="status-dot"></span>
+                <span>SYSTEM STATUS: OPTIMAL</span>
+                <span style="color: rgba(255,255,255,0.2);">|</span>
+                <span>COMPUTER ENGINEER SHOWCASE</span>
+            </div>
+            <div class="telemetry-right">
+                <span>LATENCY: 14ms</span>
+                <span style="color: rgba(255,255,255,0.2);">|</span>
+                <span id="telemetry-clock">UTC: --:--:--</span>
+            </div>
+        </div>
+
+        <!-- Tactical Navigation Header -->
         <nav>
             <a href="index.html" class="logo">
-                <i class="fas fa-crosshairs"></i> BARIŞ_BALİ // PROJECTS
+                <i class="fas fa-crosshairs"></i> BARIŞ_BALİ <span class="logo-sub">PROJECTS</span>
             </a>
-            <div class="nav-links">
-                <a href="https://www.barisbali.com/" target="_blank" class="nav-link"><i class="fas fa-globe"></i> Main
-                    Site</a>
-                <a href="https://github.com/barisbali" target="_blank" class="nav-link"><i class="fab fa-github"></i>
-                    GitHub</a>
+            
+            <div class="nav-controls">
+                <button class="cmd-trigger" id="cmd-trigger-btn" aria-label="Search Systems">
+                    <i class="fas fa-search"></i> <span>SEARCH</span> <kbd>Ctrl+K</kbd>
+                </button>
+                <button class="audio-toggle-btn active" id="audio-toggle-btn" aria-label="Toggle Sound Effects">
+                    <i class="fas fa-volume-up"></i> <span class="audio-status">AUDIO: ON</span>
+                </button>
+                <div class="nav-links">
+                    <a href="https://www.barisbali.com/" target="_blank" class="nav-link"><i class="fas fa-globe"></i> Main Site</a>
+                    <a href="https://github.com/barisbali" target="_blank" class="nav-link"><i class="fab fa-github"></i> GitHub</a>
+                </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
         <header class="hero-section">
-            <div class="sys-status">STATUS: ONLINE</div>
+            <div class="badge-clearance">
+                <i class="fas fa-laptop-code"></i> COMPUTER ENGINEER
+            </div>
+            
             <h1 class="hero-title">
-                <span class="glitch-text" data-text="ENGINEER">ENGINEER</span><br>
-                PROJECTS
+                ENGINEERING <span class="accent-text glitch-text" data-text="MISSION-CRITICAL">MISSION-CRITICAL</span> SYSTEMS
             </h1>
+            
             <p class="hero-subtitle">
-                A showcase of my projects, from native iOS applications to interactive games and embedded software
-                development projects.
-                This page focuses on my technical execution and brief explanations of the projects. For my full
-                background
-                and resume, please visit my main website. This page is still in development and will be updated with
-                more projects and more details.
+                A showcase of software engineering projects spanning <strong>native iOS architectures</strong>, <strong>AI-driven recommendation engines</strong>, <strong>embedded game simulations</strong>, and <strong>high-performance web platforms</strong>. Built with a focus on technical execution, clean algorithms, and high-reliability systems design.
             </p>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+
+            <!-- Capabilities Grid -->
+            <div class="capabilities-grid">
+                <div class="cap-card">
+                    <div class="cap-num">01 // EMBEDDED &amp; NATIVE</div>
+                    <div class="cap-title">iOS &amp; SIMULATION</div>
+                    <div class="cap-desc">SwiftUI, CoreData, C# Unity 3D engine, custom gesture &amp; fluid visual physics.</div>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-num">02 // AI &amp; ML ENGINE</div>
+                    <div class="cap-title">PREDICTIVE LOGIC</div>
+                    <div class="cap-desc">Django, Matrix Factorization, KNN, Surprise ML library, automated AWS pipelines.</div>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-num">03 // FULL-STACK TELEMETRY</div>
+                    <div class="cap-title">HIGH-PERF WEB UI</div>
+                    <div class="cap-desc">Framework-free Vanilla JS execution, responsive glassmorphism HUD, zero-overhead Web APIs.</div>
+                </div>
+            </div>
+
+            <div class="hero-actions">
                 <a href="#projects" class="tactile-btn">
-                    <i class="fas fa-layer-group"></i> VIEW PROJECTS
+                    <i class="fas fa-layer-group"></i> EXPLORE SYSTEMS
                 </a>
-                <a href="https://www.barisbali.com/" target="_blank" class="tactile-btn pink">
-                    <i class="fas fa-user"></i> ABOUT ME
+                <a href="https://www.barisbali.com/" target="_blank" class="tactile-btn amber">
+                    <i class="fas fa-user-shield"></i> FULL PROFILE &amp; RESUME
                 </a>
             </div>
         </header>
 
-        <!-- Projects Grid -->
+        <!-- Projects Grid Section -->
         <main id="projects" class="projects-section">
             <div class="section-header">
-                <h2>PROJECTS</h2>
-                <span class="counter">05 PROJECTS</span>
+                <h2><i class="fas fa-radar" style="color: var(--neon-cyan);"></i> SOFTWARE &amp; SYSTEM PROJECTS</h2>
+                <span class="counter">05 SYSTEMS LOADED</span>
+            </div>
+
+            <!-- System Category Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">ALL SYSTEMS [5]</button>
+                <button class="filter-btn" data-filter="ios">NATIVE iOS [1]</button>
+                <button class="filter-btn" data-filter="web">AI &amp; WEB PLATFORMS [3]</button>
+                <button class="filter-btn" data-filter="game">SIMULATION &amp; GAMES [1]</button>
             </div>
 
             <div class="project-grid">
 
                 <!-- Project 0: GamerLog -->
-                <a href="projects/gamerlog.html" class="project-card">
+                <a href="projects/gamerlog.html" class="project-card" data-category="web">
                     <div class="card-top">
                         <div class="project-icon">
-                            <img src="assets/icons/gamerlog-logo.png" alt="GamerLog Icon"
-                                onerror="this.src='https://via.placeholder.com/50?text=GL'">
+                            <img src="assets/icons/gamerlog-logo.png" alt="GamerLog Icon" onerror="this.src='https://via.placeholder.com/50?text=GL'">
                         </div>
-                        <span class="type-tag web">Web Platform</span>
+                        <span class="type-tag web">AI PLATFORM</span>
                     </div>
                     <h3 class="project-title">GamerLog</h3>
-                    <p class="project-desc">Django-based platform where players build a visual game library, rate & review titles, and get AI-powered recommendations.</p>
+                    <p class="project-desc">
+                        Django-based data ecosystem with collaborative filtering recommendation logic. Integrates real-time feeds, predictive ML algorithms, and scalable AWS deployment.
+                    </p>
+                    <div class="card-spec-bar">
+                        <span><i class="fas fa-brain"></i> Surprise ML</span>
+                        <span><i class="fas fa-cloud"></i> AWS Deployed</span>
+                    </div>
                     <div class="tech-stack">
                         <span class="tech-tag">Django</span>
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">AWS</span>
                     </div>
                     <div class="card-footer">
-                        VIEW DETAILS <i class="fas fa-chevron-right"></i>
+                        SYSTEM SPECIFICATIONS <i class="fas fa-chevron-right"></i>
                     </div>
                 </a>
 
                 <!-- Project 1: Rektonic -->
-                <a href="projects/rektonic.html" class="project-card">
+                <a href="projects/rektonic.html" class="project-card" data-category="ios">
                     <div class="card-top">
                         <div class="project-icon">
-                            <img src="assets/icons/rektonic-habit-icon.png" alt="Rektonic App Icon"
-                                onerror="this.src='https://via.placeholder.com/50?text=R'">
+                            <img src="assets/icons/rektonic-habit-icon.png" alt="Rektonic App Icon" onerror="this.src='https://via.placeholder.com/50?text=R'">
                         </div>
-                        <span class="type-tag ios">iOS SYS</span>
+                        <span class="type-tag ios">iOS NATIVE</span>
                     </div>
                     <h3 class="project-title">Rektonic</h3>
-                    <p class="project-desc">AI-powered minimalist habit tracker. Built to stop coddling users and
-                        provide the cold, hard truth via liquid-fill visualization.</p>
+                    <p class="project-desc">
+                        AI-powered minimalist habit &amp; task tracker. Uses real-time custom liquid-fill vector animations in SwiftUI and on-device CoreData persistence.
+                    </p>
+                    <div class="card-spec-bar">
+                        <span><i class="fas fa-mobile-alt"></i> SwiftUI Engine</span>
+                        <span><i class="fas fa-database"></i> CoreData</span>
+                    </div>
                     <div class="tech-stack">
                         <span class="tech-tag">SwiftUI</span>
                         <span class="tech-tag">CoreData</span>
-                        <span class="tech-tag">AI Models</span>
+                        <span class="tech-tag">FoundationModels</span>
+                        <span class="tech-tag">Haptics</span>
                     </div>
                     <div class="card-footer">
-                        VIEW DETAILS <i class="fas fa-chevron-right"></i>
+                        SYSTEM SPECIFICATIONS <i class="fas fa-chevron-right"></i>
                     </div>
                 </a>
 
                 <!-- Project 2: Legacy Runner -->
-                <a href="projects/legacy-runner.html" class="project-card">
+                <a href="projects/legacy-runner.html" class="project-card" data-category="game">
                     <div class="card-top">
                         <div class="project-icon">
-                            <img src="assets/icons/legacy-runner-icon.png" alt="Legacy Runner Icon"
-                                onerror="this.src='https://via.placeholder.com/50?text=LR'">
+                            <img src="assets/icons/legacy-runner-icon.png" alt="Legacy Runner Icon" onerror="this.src='https://via.placeholder.com/50?text=LR'">
                         </div>
-                        <span class="type-tag game">Video Game</span>
+                        <span class="type-tag game">SIMULATION / GAME</span>
                     </div>
                     <h3 class="project-title">Legacy Runner</h3>
-                    <p class="project-desc">Procedurally generated endless runner where every death impacts your next
-                        life. Choices build your legacy.</p>
+                    <p class="project-desc">
+                        Procedurally generated endless runner built in Unity 3D &amp; C#. Features physical age-progression loops, moral state transitions, and persistent death-unlocked power-up systems.
+                    </p>
+                    <div class="card-spec-bar">
+                        <span><i class="fas fa-cubes"></i> Procedural Gen</span>
+                        <span><i class="fas fa-gamepad"></i> C# Engine</span>
+                    </div>
                     <div class="tech-stack">
-                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Unity 3D</span>
                         <span class="tech-tag">C#</span>
                         <span class="tech-tag">Blender</span>
+                        <span class="tech-tag">Game Physics</span>
                     </div>
                     <div class="card-footer">
-                        VIEW DETAILS <i class="fas fa-chevron-right"></i>
+                        SYSTEM SPECIFICATIONS <i class="fas fa-chevron-right"></i>
                     </div>
                 </a>
 
                 <!-- Project 3: Portfolio -->
-                <a href="projects/portfolio.html" class="project-card">
+                <a href="projects/portfolio.html" class="project-card" data-category="web">
                     <div class="card-top">
                         <div class="project-icon">
-                            <img src="assets/icons/baris-hero.png" alt="Portfolio Icon"
-                                onerror="this.src='https://via.placeholder.com/50?text=P'">
+                            <img src="assets/icons/baris-hero.png" alt="Portfolio Icon" onerror="this.src='https://via.placeholder.com/50?text=P'">
                         </div>
-                        <span class="type-tag web">Website</span>
+                        <span class="type-tag web">WEB ENGINE</span>
                     </div>
-                    <h3 class="project-title">PERSONAL PAGE</h3>
-                    <p class="project-desc">The original personal portfolio built from scratch without frameworks,
-                        featuring responsive retro futuristic effects.</p>
+                    <h3 class="project-title">Personal Portfolio V1</h3>
+                    <p class="project-desc">
+                        Framework-free engineering site built with pure Vanilla JS. Features custom theme persistence, high-performance DOM manipulation, and responsive HUD styling.
+                    </p>
+                    <div class="card-spec-bar">
+                        <span><i class="fas fa-bolt"></i> Zero Overhead</span>
+                        <span><i class="fas fa-code"></i> Pure JS</span>
+                    </div>
                     <div class="tech-stack">
                         <span class="tech-tag">HTML5</span>
                         <span class="tech-tag">CSS3</span>
                         <span class="tech-tag">Vanilla JS</span>
+                        <span class="tech-tag">Responsive UI</span>
                     </div>
                     <div class="card-footer">
-                        VIEW DETAILS <i class="fas fa-chevron-right"></i>
+                        SYSTEM SPECIFICATIONS <i class="fas fa-chevron-right"></i>
                     </div>
                 </a>
 
                 <!-- Project 4: Burning Letter -->
-                <a href="projects/burning-letter.html" class="project-card">
+                <a href="projects/burning-letter.html" class="project-card" data-category="web">
                     <div class="card-top">
                         <div class="project-icon">
-                            <img src="assets/icons/burn-the-letter-images/letter1.png" alt="Burning Letter Icon"
-                                onerror="this.src='https://via.placeholder.com/50?text=BL'">
+                            <img src="assets/icons/burn-the-letter-images/letter1.png" alt="Burning Letter Icon" onerror="this.src='https://via.placeholder.com/50?text=BL'">
                         </div>
-                        <span class="type-tag web">Web App</span>
+                        <span class="type-tag web">WEB APP</span>
                     </div>
-                    <h3 class="project-title">BURNING LETTER</h3>
-                    <p class="project-desc">Write a letter, pour your emotions into it, and burn it with a tap. Vanish
-                        it from the world forever.</p>
+                    <h3 class="project-title">Burning Letter</h3>
+                    <p class="project-desc">
+                        Interactive cathartic writing web application. Implements client-side privacy protection (zero data persistence) paired with fluid particle-burn visual effects.
+                    </p>
+                    <div class="card-spec-bar">
+                        <span><i class="fas fa-user-shield"></i> Zero Logging</span>
+                        <span><i class="fas fa-fire"></i> Custom FX</span>
+                    </div>
                     <div class="tech-stack">
                         <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JS</span>
+                        <span class="tech-tag">CSS Animations</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Privacy Core</span>
                     </div>
                     <div class="card-footer">
-                        VIEW DETAILS <i class="fas fa-chevron-right"></i>
+                        SYSTEM SPECIFICATIONS <i class="fas fa-chevron-right"></i>
                     </div>
                 </a>
 
             </div>
         </main>
+
+        <!-- Command Palette Search Overlay -->
+        <div class="cmd-palette-backdrop" id="cmd-palette">
+            <div class="cmd-palette-dialog">
+                <div class="cmd-search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="cmd-input" id="cmd-input" placeholder="Search systems, technologies, or keywords..." autocomplete="off">
+                </div>
+                <div class="cmd-results" id="cmd-results">
+                    <!-- Dynamic Search Results -->
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer>
@@ -189,19 +278,19 @@
                     <a href="https://x.com/codebarba" target="_blank" class="social-link" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://linkedin.com/in/barisbali" target="_blank" class="social-link"
-                        aria-label="LinkedIn">
+                    <a href="https://linkedin.com/in/barisbali" target="_blank" class="social-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                     <a href="https://github.com/barisbali" target="_blank" class="social-link" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
-                <p class="footer-text">&copy; 2026 BARIS BALI. END OF LINE.</p>
+                <p class="footer-text">&copy; 2026 BARIŞ BALI // COMPUTER ENGINEER // ALL SYSTEMS OPERATIONAL</p>
             </div>
         </footer>
     </div>
 
+    <!-- Scripts Engine -->
     <script src="script.js"></script>
 </body>
 
